@@ -1,19 +1,9 @@
 import Foundation
 
-#if canImport(Combine)
-import Combine
-#endif
-
 /// Main manager for handling alarms and notifications
-#if canImport(Combine)
-public class AlarmManager: ObservableObject {
-    @Published public var alarms: [Alarm] = []
-    @Published public var statistics: GlobalStatistics = GlobalStatistics()
-#else
 public class AlarmManager {
     public var alarms: [Alarm] = []
     public var statistics: GlobalStatistics = GlobalStatistics()
-#endif
     
     private let userDefaults = UserDefaults.standard
     private let alarmsKey = "savedAlarms"

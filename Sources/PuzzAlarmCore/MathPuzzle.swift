@@ -1,15 +1,7 @@
 import Foundation
 
-#if canImport(CoreMotion)
-import CoreMotion
-#endif
-
 /// Protocol for all puzzles
-#if canImport(Combine)
-public protocol Puzzle: ObservableObject {
-#else
 public protocol Puzzle: AnyObject {
-#endif
     var isCompleted: Bool { get }
     var progress: Double { get }
     var timeRemaining: TimeInterval { get }
@@ -20,21 +12,12 @@ public protocol Puzzle: AnyObject {
 }
 
 /// Math puzzle implementation
-#if canImport(Combine)
-public class MathPuzzle: Puzzle {
-    @Published public var isCompleted: Bool = false
-    @Published public var progress: Double = 0.0
-    @Published public var timeRemaining: TimeInterval = 0
-    @Published public var currentProblem: MathProblem?
-    @Published public var correctAnswers: Int = 0
-#else
 public class MathPuzzle: Puzzle {
     public var isCompleted: Bool = false
     public var progress: Double = 0.0
     public var timeRemaining: TimeInterval = 0
     public var currentProblem: MathProblem?
     public var correctAnswers: Int = 0
-#endif
     
     private let settings: PuzzleSettings
     private let totalProblems: Int
@@ -98,7 +81,8 @@ public class MathPuzzle: Puzzle {
     }
     
     private func startTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
             self.timeRemaining -= 1
             if self.timeRemaining <= 0 {
                 self.timer?.invalidate()

@@ -4,20 +4,15 @@ client:
 tools: {}
 targets:
   "PackageStructure": ["<PackageStructure>"]
-  "PuzzAlarm-x86_64-unknown-linux-gnu-debug.exe": ["<PuzzAlarm-x86_64-unknown-linux-gnu-debug.exe>"]
-  "PuzzAlarm-x86_64-unknown-linux-gnu-debug.module": ["<PuzzAlarm-x86_64-unknown-linux-gnu-debug.module>"]
   "PuzzAlarmCore-x86_64-unknown-linux-gnu-debug.module": ["<PuzzAlarmCore-x86_64-unknown-linux-gnu-debug.module>"]
   "PuzzAlarmCoreTests-x86_64-unknown-linux-gnu-debug.module": ["<PuzzAlarmCoreTests-x86_64-unknown-linux-gnu-debug.module>"]
   "PuzzAlarmPackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module": ["<PuzzAlarmPackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module>"]
   "PuzzAlarmPackageTests-x86_64-unknown-linux-gnu-debug.module": ["<PuzzAlarmPackageTests-x86_64-unknown-linux-gnu-debug.module>"]
   "PuzzAlarmPackageTests-x86_64-unknown-linux-gnu-debug.test": ["<PuzzAlarmPackageTests-x86_64-unknown-linux-gnu-debug.test>"]
-  "main": ["<PuzzAlarm-x86_64-unknown-linux-gnu-debug.exe>","<PuzzAlarm-x86_64-unknown-linux-gnu-debug.module>","<PuzzAlarmCore-x86_64-unknown-linux-gnu-debug.module>"]
-  "test": ["<PuzzAlarm-x86_64-unknown-linux-gnu-debug.exe>","<PuzzAlarm-x86_64-unknown-linux-gnu-debug.module>","<PuzzAlarmCore-x86_64-unknown-linux-gnu-debug.module>","<PuzzAlarmCoreTests-x86_64-unknown-linux-gnu-debug.module>","<PuzzAlarmPackageTests-x86_64-unknown-linux-gnu-debug.test>"]
+  "main": ["<PuzzAlarmCore-x86_64-unknown-linux-gnu-debug.module>"]
+  "test": ["<PuzzAlarmCore-x86_64-unknown-linux-gnu-debug.module>","<PuzzAlarmCoreTests-x86_64-unknown-linux-gnu-debug.module>","<PuzzAlarmPackageTests-x86_64-unknown-linux-gnu-debug.test>"]
 default: "main"
 nodes:
-  "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarm/":
-    is-directory-structure: true
-    content-exclusion-patterns: [".git",".build"]
   "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/":
     is-directory-structure: true
     content-exclusion-patterns: [".git",".build"]
@@ -25,25 +20,6 @@ nodes:
     is-directory-structure: true
     content-exclusion-patterns: [".git",".build"]
 commands:
-  "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/PuzzAlarm.swiftmodule.o":
-    tool: shell
-    inputs: ["/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarm.swiftmodule"]
-    outputs: ["/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/PuzzAlarm.swiftmodule.o"]
-    description: "Wrapping AST for PuzzAlarm for debugging"
-    args: ["/usr/share/swift/usr/bin/swiftc","-modulewrap","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarm.swiftmodule","-o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/PuzzAlarm.swiftmodule.o","-target","x86_64-unknown-linux-gnu"]
-
-  "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/sources":
-    tool: write-auxiliary-file
-    inputs: ["<sources-file-list>","/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarm/main.swift"]
-    outputs: ["/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/sources"]
-    description: "Write auxiliary file /home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/sources"
-
-  "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.product/Objects.LinkFileList":
-    tool: write-auxiliary-file
-    inputs: ["<link-file-list>","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/PuzzAlarm.swiftmodule.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/main.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/Alarm.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/AlarmManager.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/CoreGraphicsExtensions.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/MarbleMazePuzzle.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/MathPuzzle.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/PuzzAlarmCore.swiftmodule.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/SleepDetectionService.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/Statistics.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/WaterPuzzle.swift.o"]
-    outputs: ["/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.product/Objects.LinkFileList"]
-    description: "Write auxiliary file /home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.product/Objects.LinkFileList"
-
   "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/PuzzAlarmCore.swiftmodule.o":
     tool: shell
     inputs: ["/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmCore.swiftmodule"]
@@ -119,16 +95,6 @@ commands:
     always-out-of-date: "true"
     description: "Write auxiliary file /home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
 
-  "<PuzzAlarm-x86_64-unknown-linux-gnu-debug.exe>":
-    tool: phony
-    inputs: ["/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm"]
-    outputs: ["<PuzzAlarm-x86_64-unknown-linux-gnu-debug.exe>"]
-
-  "<PuzzAlarm-x86_64-unknown-linux-gnu-debug.module>":
-    tool: phony
-    inputs: ["/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/main.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarm.swiftmodule"]
-    outputs: ["<PuzzAlarm-x86_64-unknown-linux-gnu-debug.module>"]
-
   "<PuzzAlarmCore-x86_64-unknown-linux-gnu-debug.module>":
     tool: phony
     inputs: ["/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/Alarm.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/AlarmManager.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/CoreGraphicsExtensions.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/MarbleMazePuzzle.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/MathPuzzle.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/SleepDetectionService.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/Statistics.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/WaterPuzzle.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmCore.swiftmodule"]
@@ -153,20 +119,6 @@ commands:
     tool: phony
     inputs: ["/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.xctest"]
     outputs: ["<PuzzAlarmPackageTests-x86_64-unknown-linux-gnu-debug.test>"]
-
-  "C.PuzzAlarm-x86_64-unknown-linux-gnu-debug.exe":
-    tool: shell
-    inputs: ["/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/PuzzAlarm.swiftmodule.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/main.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/Alarm.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/AlarmManager.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/CoreGraphicsExtensions.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/MarbleMazePuzzle.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/MathPuzzle.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/PuzzAlarmCore.swiftmodule.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/SleepDetectionService.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/Statistics.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/WaterPuzzle.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.product/Objects.LinkFileList"]
-    outputs: ["/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm"]
-    description: "Linking ./.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm"
-    args: ["/usr/share/swift/usr/bin/swiftc","-L","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug","-o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm","-module-name","PuzzAlarm","-emit-executable","-Xlinker","--defsym","-Xlinker","main=PuzzAlarm_main","-Xlinker","-rpath=$ORIGIN","@/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.product/Objects.LinkFileList","-target","x86_64-unknown-linux-gnu","-g"]
-
-  "C.PuzzAlarm-x86_64-unknown-linux-gnu-debug.module":
-    tool: shell
-    inputs: ["/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarm/main.swift","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmCore.swiftmodule","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/sources"]
-    outputs: ["/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/main.swift.o","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarm.swiftmodule"]
-    description: "Compiling Swift Module 'PuzzAlarm' (1 sources)"
-    args: ["/usr/share/swift/usr/bin/swiftc","-module-name","PuzzAlarm","-emit-dependencies","-emit-module","-emit-module-path","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarm.swiftmodule","-output-file-map","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/output-file-map.json","-incremental","-c","@/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/sources","-I","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules","-target","x86_64-unknown-linux-gnu","-enable-batch-mode","-index-store-path","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/index/store","-Onone","-enable-testing","-j4","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","PuzzAlarm_main","-parse-as-library","-color-diagnostics","-swift-version","5","-g","-Xcc","-fPIC","-Xcc","-g","-package-name","puzzalarm","-Xcc","-fno-omit-frame-pointer"]
 
   "C.PuzzAlarmCore-x86_64-unknown-linux-gnu-debug.module":
     tool: shell
@@ -205,7 +157,7 @@ commands:
 
   "PackageStructure":
     tool: package-structure-tool
-    inputs: ["/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarm/","/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/","/home/runner/work/puzzalarm/puzzalarm/Tests/PuzzAlarmCoreTests/","/home/runner/work/puzzalarm/puzzalarm/Package.swift","/home/runner/work/puzzalarm/puzzalarm/Package.resolved"]
+    inputs: ["/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/","/home/runner/work/puzzalarm/puzzalarm/Tests/PuzzAlarmCoreTests/","/home/runner/work/puzzalarm/puzzalarm/Package.swift","/home/runner/work/puzzalarm/puzzalarm/Package.resolved"]
     outputs: ["<PackageStructure>"]
     description: "Planning build"
     allow-missing-inputs: true

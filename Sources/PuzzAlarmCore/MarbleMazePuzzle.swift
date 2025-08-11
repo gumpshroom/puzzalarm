@@ -1,30 +1,27 @@
 import Foundation
 
-#if canImport(CoreMotion)
-import CoreMotion
-#endif
+/// Simple point structure for basic 2D coordinates
+public struct SimplePoint: Codable {
+    public var x: Double
+    public var y: Double
+    
+    public init(x: Double, y: Double) {
+        self.x = x
+        self.y = y
+    }
+    
+    public static let zero = SimplePoint(x: 0, y: 0)
+}
 
-/// Marble maze puzzle that uses device tilt
-#if canImport(Combine)
-public class MarbleMazePuzzle: Puzzle {
-    @Published public var isCompleted: Bool = false
-    @Published public var progress: Double = 0.0
-    @Published public var timeRemaining: TimeInterval = 300 // 5 minutes default
-    @Published public var ballPosition: CGPoint = CGPoint(x: 0.1, y: 0.1)
-    @Published public var mazeLayout: [[MazeCellType]] = []
-#else
+/// Marble maze puzzle that uses device tilt (simulated for testing)
 public class MarbleMazePuzzle: Puzzle {
     public var isCompleted: Bool = false
     public var progress: Double = 0.0
     public var timeRemaining: TimeInterval = 300 // 5 minutes default
-    public var ballPosition: CGPoint = CGPoint(x: 0.1, y: 0.1)
+    public var ballPosition: SimplePoint = SimplePoint(x: 0.1, y: 0.1)
     public var mazeLayout: [[MazeCellType]] = []
-#endif
     
     private let settings: PuzzleSettings
-    #if canImport(CoreMotion)
-    private let motionManager = CMMotionManager()
-    #endif
     private var completedMazes: Int = 0
     private var timer: Timer?
     
@@ -38,22 +35,18 @@ public class MarbleMazePuzzle: Puzzle {
         completedMazes = 0
         progress = 0.0
         timeRemaining = 300
-        ballPosition = CGPoint(x: 0.1, y: 0.1)
+        ballPosition = SimplePoint(x: 0.1, y: 0.1)
         generateMaze()
-        startMotionUpdates()
         startTimer()
     }
     
     public func reset() {
         timer?.invalidate()
         timer = nil
-        #if canImport(CoreMotion)
-        motionManager.stopAccelerometerUpdates()
-        #endif
         isCompleted = false
         progress = 0.0
         completedMazes = 0
-        ballPosition = CGPoint(x: 0.1, y: 0.1)
+        ballPosition = SimplePoint(x: 0.1, y: 0.1)
         generateMaze()
     }
     
@@ -71,13 +64,10 @@ public class MarbleMazePuzzle: Puzzle {
             if completedMazes >= settings.mazeCompletionCount {
                 isCompleted = true
                 timer?.invalidate()
-                #if canImport(CoreMotion)
-                motionManager.stopAccelerometerUpdates()
-                #endif
                 return true
             } else {
                 // Generate new maze for next round
-                ballPosition = CGPoint(x: 0.1, y: 0.1)
+                ballPosition = SimplePoint(x: 0.1, y: 0.1)
                 generateMaze()
             }
         }
@@ -85,42 +75,25 @@ public class MarbleMazePuzzle: Puzzle {
         return false
     }
     
-    private func generateMaze() {
-        let size = settings.mazeDifficulty.mazeSize
-        mazeLayout = MazeGenerator.generate(size: size)
-    }
-    
-    private func startMotionUpdates() {
-        #if canImport(CoreMotion)
-        guard motionManager.isAccelerometerAvailable else { return }
-        
-        motionManager.accelerometerUpdateInterval = 1.0 / 60.0 // 60 FPS
-        motionManager.startAccelerometerUpdates { [weak self] data, error in
-            guard let self = self, let data = data else { return }
-            
-            DispatchQueue.main.async {
-                self.updateBallPosition(acceleration: data.acceleration)
-            }
-        }
-        #endif
-    }
-    
-    #if canImport(CoreMotion)
-    private func updateBallPosition(acceleration: CMAcceleration) {
-        let sensitivity: Double = 0.02
-        let newX = ballPosition.x + acceleration.x * sensitivity
-        let newY = ballPosition.y - acceleration.y * sensitivity // Inverted Y
+    // Simulate device tilt with manual ball movement for testing
+    public func moveBall(deltaX: Double, deltaY: Double) {
+        let newX = ballPosition.x + deltaX
+        let newY = ballPosition.y + deltaY
         
         // Clamp to bounds and check for walls
         let clampedX = max(0.0, min(1.0, newX))
         let clampedY = max(0.0, min(1.0, newY))
         
         if isValidPosition(x: clampedX, y: clampedY) {
-            ballPosition = CGPoint(x: clampedX, y: clampedY)
-            checkCompletion()
+            ballPosition = SimplePoint(x: clampedX, y: clampedY)
+            _ = checkCompletion()
         }
     }
-    #endif
+    
+    private func generateMaze() {
+        let size = settings.mazeDifficulty.mazeSize
+        mazeLayout = MazeGenerator.generate(size: size)
+    }
     
     private func isValidPosition(x: Double, y: Double) -> Bool {
         let row = Int(y * Double(mazeLayout.count))
@@ -134,7 +107,8 @@ public class MarbleMazePuzzle: Puzzle {
     }
     
     private func startTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
             self.timeRemaining -= 1
             if self.timeRemaining <= 0 {
                 self.timer?.invalidate()
@@ -156,11 +130,6 @@ public enum MazeCellType: Int, CaseIterable {
 public struct MazeGenerator {
     public static func generate(size: Int) -> [[MazeCellType]] {
         var maze = Array(repeating: Array(repeating: MazeCellType.wall, count: size), count: size)
-        
-        // Create a simple maze with guaranteed path
-        // Start at top-left
-        maze[0][0] = .start
-        maze[size-1][size-1] = .end
         
         // Create a guaranteed path
         var currentRow = 0
@@ -187,10 +156,14 @@ public struct MazeGenerator {
         for _ in 0..<(size * size / 4) {
             let row = Int.random(in: 0..<size)
             let col = Int.random(in: 0..<size)
-            if row != 0 || col != 0 { // Don't override start
+            if (row != 0 || col != 0) && (row != size-1 || col != size-1) { // Don't override start or end
                 maze[row][col] = .path
             }
         }
+        
+        // Set start and end positions (after path creation to ensure they're not overwritten)
+        maze[0][0] = .start
+        maze[size-1][size-1] = .end
         
         return maze
     }

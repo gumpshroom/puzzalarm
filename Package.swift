@@ -5,31 +5,21 @@ let package = Package(
     name: "PuzzAlarm",
     platforms: [
         .iOS(.v16),
-        .watchOS(.v9)
+        .watchOS(.v9),
+        .macOS(.v13)
     ],
     products: [
         .library(
             name: "PuzzAlarmCore",
             targets: ["PuzzAlarmCore"]
-        ),
-        .executable(
-            name: "PuzzAlarm",
-            targets: ["PuzzAlarm"]
         )
     ],
-    dependencies: [
-        // Add SwiftUI and Combine support
-    ],
+    dependencies: [],
     targets: [
         .target(
             name: "PuzzAlarmCore",
             dependencies: [],
             path: "Sources/PuzzAlarmCore"
-        ),
-        .executableTarget(
-            name: "PuzzAlarm",
-            dependencies: ["PuzzAlarmCore"],
-            path: "Sources/PuzzAlarm"
         ),
         .testTarget(
             name: "PuzzAlarmCoreTests",
