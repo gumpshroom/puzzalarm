@@ -1,0 +1,1005 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.xctest",
+      "packagePath" : "/home/runner/work/puzzalarm/puzzalarm",
+      "productName" : "PuzzAlarmPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+    "PuzzAlarmPackageDiscoveredTests"
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.PuzzAlarm-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/sources",
+      "importPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarm/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmCore.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "PuzzAlarm",
+      "moduleOutputPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarm.swiftmodule",
+      "objects" : [
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "PuzzAlarm_main",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "puzzalarm",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarm.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarm/main.swift"
+      ],
+      "tempsPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.PuzzAlarmCore-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/sources",
+      "importPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/Alarm.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/AlarmManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/CoreGraphicsExtensions.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/MarbleMazePuzzle.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/MathPuzzle.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/SleepDetectionService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/Statistics.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/WaterPuzzle.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "PuzzAlarmCore",
+      "moduleOutputPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmCore.swiftmodule",
+      "objects" : [
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/Alarm.swift.o",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/AlarmManager.swift.o",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/CoreGraphicsExtensions.swift.o",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/MarbleMazePuzzle.swift.o",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/MathPuzzle.swift.o",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/SleepDetectionService.swift.o",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/Statistics.swift.o",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/WaterPuzzle.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "puzzalarm",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/Alarm.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/AlarmManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/CoreGraphicsExtensions.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/MarbleMazePuzzle.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/MathPuzzle.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/SleepDetectionService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/Statistics.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/WaterPuzzle.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmCore.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/Alarm.swift",
+        "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/AlarmManager.swift",
+        "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/CoreGraphicsExtensions.swift",
+        "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/MarbleMazePuzzle.swift",
+        "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/MathPuzzle.swift",
+        "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/SleepDetectionService.swift",
+        "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/Statistics.swift",
+        "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/WaterPuzzle.swift"
+      ],
+      "tempsPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.PuzzAlarmCoreTests-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCoreTests.build/sources",
+      "importPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Tests/PuzzAlarmCoreTests/PuzzAlarmCoreTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmCore.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCoreTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "PuzzAlarmCoreTests",
+      "moduleOutputPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmCoreTests.swiftmodule",
+      "objects" : [
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCoreTests.build/PuzzAlarmCoreTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-swift-version",
+        "5",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "puzzalarm",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCoreTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCoreTests.build/PuzzAlarmCoreTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmCoreTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/puzzalarm/puzzalarm/Tests/PuzzAlarmCoreTests/PuzzAlarmCoreTests.swift"
+      ],
+      "tempsPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCoreTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.PuzzAlarmPackageDiscoveredTests-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.build/sources",
+      "importPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.derived/PuzzAlarmCoreTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.derived/all-discovered-tests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmCoreTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "PuzzAlarmPackageDiscoveredTests",
+      "moduleOutputPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmPackageDiscoveredTests.swiftmodule",
+      "objects" : [
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.build/PuzzAlarmCoreTests.swift.o",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.build/all-discovered-tests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "puzzalarm",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.build/PuzzAlarmCoreTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.build/all-discovered-tests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmPackageDiscoveredTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.derived/PuzzAlarmCoreTests.swift",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.derived/all-discovered-tests.swift"
+      ],
+      "tempsPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.PuzzAlarmPackageTests-x86_64-unknown-linux-gnu-debug.module" : {
+      "executable" : "/usr/share/swift/usr/bin/swiftc",
+      "fileList" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.build/sources",
+      "importPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmCoreTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmPackageDiscoveredTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "PuzzAlarmPackageTests",
+      "moduleOutputPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmPackageTests.swiftmodule",
+      "objects" : [
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "x86_64-unknown-linux-gnu",
+        "-enable-batch-mode",
+        "-index-store-path",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j4",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-module-cache-path",
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-g",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "puzzalarm",
+        "-Xcc",
+        "-fno-omit-frame-pointer"
+      ],
+      "outputFileMapPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "PuzzAlarm" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "PuzzAlarm",
+      "-package-name",
+      "puzzalarm",
+      "-incremental",
+      "-c",
+      "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarm/main.swift",
+      "-I",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "PuzzAlarm_main",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "puzzalarm",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ],
+    "PuzzAlarmCore" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "PuzzAlarmCore",
+      "-package-name",
+      "puzzalarm",
+      "-incremental",
+      "-c",
+      "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/Alarm.swift",
+      "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/AlarmManager.swift",
+      "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/CoreGraphicsExtensions.swift",
+      "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/MarbleMazePuzzle.swift",
+      "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/MathPuzzle.swift",
+      "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/SleepDetectionService.swift",
+      "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/Statistics.swift",
+      "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/WaterPuzzle.swift",
+      "-I",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "puzzalarm",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ],
+    "PuzzAlarmCoreTests" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "PuzzAlarmCoreTests",
+      "-package-name",
+      "puzzalarm",
+      "-incremental",
+      "-c",
+      "/home/runner/work/puzzalarm/puzzalarm/Tests/PuzzAlarmCoreTests/PuzzAlarmCoreTests.swift",
+      "-I",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-swift-version",
+      "5",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "puzzalarm",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ],
+    "PuzzAlarmPackageDiscoveredTests" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "PuzzAlarmPackageDiscoveredTests",
+      "-package-name",
+      "puzzalarm",
+      "-incremental",
+      "-c",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.derived/PuzzAlarmCoreTests.swift",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.derived/all-discovered-tests.swift",
+      "-I",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "puzzalarm",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ],
+    "PuzzAlarmPackageTests" : [
+      "/usr/share/swift/usr/bin/swiftc",
+      "-module-name",
+      "PuzzAlarmPackageTests",
+      "-package-name",
+      "puzzalarm",
+      "-incremental",
+      "-c",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.derived/runner.swift",
+      "-I",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules",
+      "-target",
+      "x86_64-unknown-linux-gnu",
+      "-enable-batch-mode",
+      "-index-store-path",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j4",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-module-cache-path",
+      "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-color-diagnostics",
+      "-g",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "puzzalarm",
+      "-Xcc",
+      "-fno-omit-frame-pointer",
+      "-driver-use-frontend-path",
+      "/usr/share/swift/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "PuzzAlarm" : [
+      "PuzzAlarmCore"
+    ],
+    "PuzzAlarmCore" : [
+
+    ],
+    "PuzzAlarmCoreTests" : [
+      "PuzzAlarmCore"
+    ],
+    "PuzzAlarmPackageDiscoveredTests" : [
+      "PuzzAlarmCoreTests",
+      "PuzzAlarmCore"
+    ],
+    "PuzzAlarmPackageTests" : [
+      "PuzzAlarmPackageDiscoveredTests",
+      "PuzzAlarmCoreTests",
+      "PuzzAlarmCore"
+    ]
+  },
+  "testDiscoveryCommands" : {
+    "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.derived/all-discovered-tests.swift" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCoreTests.build/PuzzAlarmCoreTests.swift.o"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.derived/PuzzAlarmCoreTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.derived/all-discovered-tests.swift"
+        }
+      ]
+    }
+  },
+  "testEntryPointCommands" : {
+    "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.derived/runner.swift" : {
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/Modules/PuzzAlarmPackageDiscoveredTests.swiftmodule"
+        }
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "enableAllTraits" : false
+  },
+  "writeCommands" : {
+    "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarm/main.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/sources"
+    },
+    "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/PuzzAlarm.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/Alarm.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/AlarmManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/CoreGraphicsExtensions.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/MarbleMazePuzzle.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/MathPuzzle.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/PuzzAlarmCore.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/SleepDetectionService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/Statistics.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/WaterPuzzle.swift.o"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarm.product/Objects.LinkFileList"
+    },
+    "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/Alarm.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/AlarmManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/CoreGraphicsExtensions.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/MarbleMazePuzzle.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/MathPuzzle.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/SleepDetectionService.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/Statistics.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Sources/PuzzAlarmCore/WaterPuzzle.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/sources"
+    },
+    "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCoreTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/Tests/PuzzAlarmCoreTests/PuzzAlarmCoreTests.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCoreTests.build/sources"
+    },
+    "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.derived/PuzzAlarmCoreTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.derived/all-discovered-tests.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.build/sources"
+    },
+    "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.build/sources"
+    },
+    "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/Alarm.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/AlarmManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/CoreGraphicsExtensions.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/MarbleMazePuzzle.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/MathPuzzle.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/PuzzAlarmCore.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/SleepDetectionService.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/Statistics.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCore.build/WaterPuzzle.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCoreTests.build/PuzzAlarmCoreTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmCoreTests.build/PuzzAlarmCoreTests.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.build/PuzzAlarmCoreTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.build/PuzzAlarmPackageDiscoveredTests.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageDiscoveredTests.build/all-discovered-tests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.build/PuzzAlarmPackageTests.swiftmodule.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.build/runner.swift.o"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/PuzzAlarmPackageTests.product/Objects.LinkFileList"
+    },
+    "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/usr/share/swift/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/home/runner/work/puzzalarm/puzzalarm/.build/x86_64-unknown-linux-gnu/debug/swift-version--1BFCD5C06E9F820A.txt"
+    }
+  }
+}
