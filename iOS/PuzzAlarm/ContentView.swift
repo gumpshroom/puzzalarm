@@ -14,6 +14,14 @@ struct ContentView: View {
                 .navigationTitle("Alarms")
                 .navigationBarTitleDisplayMode(.large)
                 .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        NavigationLink {
+                            SettingsView(alarmManager: alarmManager)
+                        } label: {
+                            Image(systemName: "gearshape")
+                        }
+                    }
+                    
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
                             showingAddAlarm = true

@@ -6,10 +6,34 @@ struct AlarmListView: View {
     
     var body: some View {
         List {
-            ForEach(alarmManager.alarms, id: \.id) { alarm in
-                AlarmRowView(alarm: alarm, alarmManager: alarmManager)
+            if alarmManager.alarms.isEmpty {
+                VStack(spacing: 16) {
+                    Image(systemName: "clock")
+                        .font(.system(size: 50))
+                        .foregroundColor(.secondary)
+                    
+                    Text("No Alarms")
+                        .font(.title2)
+                        .fontWeight(.medium)
+                    
+                    Text("Tap the + button to create your first alarm")
+                        .font(.body)
+                        .foregroundColor(.secondary)
+                        .multilineTextAlignment(.center)
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 50)
+                .listRowSeparator(.hidden)
+            } else {
+                ForEach(alarmManager.alarms, id: \.id) { alarm in
+                    NavigationLink {
+                        EditAlarmView(alarm: alarm, alarmManager: alarmManager)
+                    } label: {
+                        AlarmRowView(alarm: alarm, alarmManager: alarmManager)
+                    }
+                }
+                .onDelete(perform: deleteAlarms)
             }
-            .onDelete(perform: deleteAlarms)
         }
         .listStyle(.plain)
     }
