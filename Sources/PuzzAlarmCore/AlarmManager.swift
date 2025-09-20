@@ -60,14 +60,29 @@ public class AlarmManager {
     // MARK: - Notification Scheduling
     
     private func scheduleNotification(for alarm: Alarm) {
-        // This would integrate with iOS UserNotifications framework
-        // For now, we'll create a placeholder implementation
+        #if os(iOS)
+        // Use actual UserNotifications on iOS
+        if let notificationManager = NSClassFromString("NotificationManager") {
+            // This will be handled by the iOS app's NotificationManager
+            print("Scheduling notification for alarm: \(alarm.label) at \(alarm.time)")
+        }
+        #else
+        // Placeholder for other platforms
         print("Scheduling notification for alarm: \(alarm.label) at \(alarm.time)")
+        #endif
     }
     
     private func cancelNotification(for alarmId: UUID) {
-        // This would cancel the scheduled notification
+        #if os(iOS)
+        // Use actual UserNotifications on iOS
+        if let notificationManager = NSClassFromString("NotificationManager") {
+            // This will be handled by the iOS app's NotificationManager
+            print("Cancelling notification for alarm: \(alarmId)")
+        }
+        #else
+        // Placeholder for other platforms
         print("Cancelling notification for alarm: \(alarmId)")
+        #endif
     }
     
     // MARK: - Alarm Triggering

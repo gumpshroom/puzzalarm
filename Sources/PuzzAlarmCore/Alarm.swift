@@ -62,6 +62,10 @@ public enum Weekday: String, CaseIterable, Codable {
         case .sunday: return "Sunday"
         }
     }
+    
+    public var abbreviation: String {
+        return self.rawValue
+    }
 }
 
 /// Vibration patterns for alarms
@@ -71,6 +75,10 @@ public enum VibrationPattern: String, CaseIterable, Codable {
     case gentle = "Gentle"
     case strong = "Strong"
     case custom = "Custom"
+    
+    public var displayName: String {
+        return self.rawValue
+    }
 }
 
 /// Types of puzzles available
@@ -116,6 +124,10 @@ public enum MathDifficulty: String, CaseIterable, Codable {
     case medium = "Medium"
     case hard = "Hard"
     case expert = "Expert"
+    
+    public var displayName: String {
+        return self.rawValue
+    }
 }
 
 /// Difficulty levels for marble maze
@@ -124,4 +136,8 @@ public enum MazeDifficulty: String, CaseIterable, Codable {
     case medium = "Medium"
     case hard = "Hard"
     case expert = "Expert"
+    
+    public var displayName: String {
+        return self.rawValue
+    }
 }
