@@ -10,6 +10,7 @@ public struct Alarm: Codable, Identifiable, Equatable {
     public var vibrationPattern: VibrationPattern
     public var isSilentMode: Bool
     public var isGradualWakeup: Bool
+    public var snoozeEnabled: Bool
     public var repeatDays: Set<Weekday>
     public var puzzleType: PuzzleType?
     public var puzzleSettings: PuzzleSettings
@@ -23,6 +24,7 @@ public struct Alarm: Codable, Identifiable, Equatable {
         vibrationPattern: VibrationPattern = .standard,
         isSilentMode: Bool = false,
         isGradualWakeup: Bool = false,
+        snoozeEnabled: Bool = true,
         repeatDays: Set<Weekday> = [],
         puzzleType: PuzzleType? = nil,
         puzzleSettings: PuzzleSettings = PuzzleSettings()
@@ -35,6 +37,7 @@ public struct Alarm: Codable, Identifiable, Equatable {
         self.vibrationPattern = vibrationPattern
         self.isSilentMode = isSilentMode
         self.isGradualWakeup = isGradualWakeup
+        self.snoozeEnabled = snoozeEnabled
         self.repeatDays = repeatDays
         self.puzzleType = puzzleType
         self.puzzleSettings = puzzleSettings
@@ -62,6 +65,10 @@ public enum Weekday: String, CaseIterable, Codable {
         case .sunday: return "Sunday"
         }
     }
+    
+    public var abbreviation: String {
+        return self.rawValue
+    }
 }
 
 /// Vibration patterns for alarms
@@ -71,6 +78,10 @@ public enum VibrationPattern: String, CaseIterable, Codable {
     case gentle = "Gentle"
     case strong = "Strong"
     case custom = "Custom"
+    
+    public var displayName: String {
+        return self.rawValue
+    }
 }
 
 /// Types of puzzles available
@@ -116,6 +127,10 @@ public enum MathDifficulty: String, CaseIterable, Codable {
     case medium = "Medium"
     case hard = "Hard"
     case expert = "Expert"
+    
+    public var displayName: String {
+        return self.rawValue
+    }
 }
 
 /// Difficulty levels for marble maze
@@ -124,4 +139,8 @@ public enum MazeDifficulty: String, CaseIterable, Codable {
     case medium = "Medium"
     case hard = "Hard"
     case expert = "Expert"
+    
+    public var displayName: String {
+        return self.rawValue
+    }
 }
