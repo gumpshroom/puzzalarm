@@ -14,6 +14,7 @@ struct AddAlarmView: View {
     @State private var vibrationPattern: VibrationPattern = .standard
     @State private var isSilentMode = false
     @State private var isGradualWakeup = false
+    @State private var snoozeEnabled = true
     @State private var puzzleSettings = PuzzleSettings()
     
     var body: some View {
@@ -42,6 +43,7 @@ struct AddAlarmView: View {
                     }
                     
                     Toggle("Gradual Wake-up", isOn: $isGradualWakeup)
+                    Toggle("Snooze", isOn: $snoozeEnabled)
                 }
                 
                 Section("Repeat") {
@@ -101,6 +103,7 @@ struct AddAlarmView: View {
             vibrationPattern: vibrationPattern,
             isSilentMode: isSilentMode,
             isGradualWakeup: isGradualWakeup,
+            snoozeEnabled: snoozeEnabled,
             repeatDays: repeatDays,
             puzzleType: puzzleType,
             puzzleSettings: puzzleSettings

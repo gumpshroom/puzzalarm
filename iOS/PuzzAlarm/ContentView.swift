@@ -5,6 +5,8 @@ struct ContentView: View {
     @StateObject private var alarmManager = ObservableAlarmManager()
     @State private var showingAddAlarm = false
     @State private var notificationPermissionGranted = false
+    @State private var triggeredAlarm: Alarm? = nil
+    @State private var showingPuzzle = false
     
     var body: some View {
         NavigationView {
@@ -22,6 +24,25 @@ struct ContentView: View {
                 }
                 .sheet(isPresented: $showingAddAlarm) {
                     AddAlarmView(alarmManager: alarmManager)
+                }
+                .fullScreenCover(isPresented: $showingPuzzle) {
+                    if let alarm = triggeredAlarm {
+                        PuzzleInterface(
+                            alarm: alarm,
+                            onCompleted: {
+                                // Snooze alarm
+                                alarmManager.snoozeAlarm(alarm.id)
+                                showingPuzzle = false
+                                triggeredAlarm = nil
+                            },
+                            onDismiss: { completionTime in
+                                // Dismiss alarm with puzzle completion time
+                                alarmManager.dismissAlarm(alarm.id, puzzleCompletionTime: completionTime)
+                                showingPuzzle = false
+                                triggeredAlarm = nil
+                            }
+                        )
+                    }
                 }
                 .onAppear {
                     requestNotificationPermission()
@@ -49,8 +70,11 @@ struct ContentView: View {
     }
     
     private func handleAlarmTriggered(alarmId: UUID) {
-        // This would show the puzzle interface
-        print("Alarm triggered: \(alarmId)")
+        // Find the triggered alarm and show puzzle interface
+        if let alarm = alarmManager.alarms.first(where: { $0.id == alarmId }) {
+            triggeredAlarm = alarm
+            showingPuzzle = true
+        }
     }
 }
 

@@ -10,6 +10,7 @@ public struct Alarm: Codable, Identifiable, Equatable {
     public var vibrationPattern: VibrationPattern
     public var isSilentMode: Bool
     public var isGradualWakeup: Bool
+    public var snoozeEnabled: Bool
     public var repeatDays: Set<Weekday>
     public var puzzleType: PuzzleType?
     public var puzzleSettings: PuzzleSettings
@@ -23,6 +24,7 @@ public struct Alarm: Codable, Identifiable, Equatable {
         vibrationPattern: VibrationPattern = .standard,
         isSilentMode: Bool = false,
         isGradualWakeup: Bool = false,
+        snoozeEnabled: Bool = true,
         repeatDays: Set<Weekday> = [],
         puzzleType: PuzzleType? = nil,
         puzzleSettings: PuzzleSettings = PuzzleSettings()
@@ -35,6 +37,7 @@ public struct Alarm: Codable, Identifiable, Equatable {
         self.vibrationPattern = vibrationPattern
         self.isSilentMode = isSilentMode
         self.isGradualWakeup = isGradualWakeup
+        self.snoozeEnabled = snoozeEnabled
         self.repeatDays = repeatDays
         self.puzzleType = puzzleType
         self.puzzleSettings = puzzleSettings
